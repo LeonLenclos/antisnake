@@ -1,6 +1,9 @@
 from random import randint
 import pygame
 pygame.init()
+import sys
+if getattr(sys, 'frozen', False):
+    os.chdir(sys._MEIPASS)
 
 class Theme(object):
     def __init__(self, bg, snake, food, font):
